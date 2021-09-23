@@ -1,4 +1,4 @@
-# lucky-birthday
+# Stocks Margin
 
 This app is made in VanillaJS and will take the margin on stocks.
 Check this app [here]()
