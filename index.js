@@ -18,7 +18,6 @@ checkBtn.addEventListener("click", () => {
     let costValue = costPrice.value;
     let quantity = num.value;
     let currentValue = currentPrice.value;
-    console.log("costValue", costValue)
     if (!costValue || costValue < 0) {
         showError("Please enter cost price greater than 0")
         return;
@@ -40,9 +39,12 @@ checkBtn.addEventListener("click", () => {
 const calculateMargin = (costValue, quantity, currentValue) => {
     let totalCostPrice = costValue * quantity;
     let totalCurrentPrice = currentValue * quantity;
+    if (totalCostPrice == totalCurrentPrice) {
+        showError(`No Profit or Loss is made as Cost Price = ${costValue} is equal to Current Price  = ${currentValue}`)
+        return;
+    }
     let profitPercent = ((currentValue / costValue) * 100).toFixed(2);
     let margin = totalCurrentPrice - totalCostPrice;
-    console.log("profitPercent", profitPercent)
     if (margin < 0) {
         margin = margin.toString()
         showError(`You have made a loss of ${profitPercent}% which amounts to ₹${margin.split("-")[1]}`)
