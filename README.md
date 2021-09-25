@@ -1,7 +1,7 @@
-# lucky-birthday
+# Stocks Margin
 
-This app is made in VanillaJS and will take date of birth and lucky number from user and will tell if its lucky or not.
-Check this app [here]()
+This app is made in VanillaJS and will take the margin on stocks.
+Check this app [here](https://stock-margin-276d4b.netlify.app/)
 
 # Tech Used
   - Javascript
